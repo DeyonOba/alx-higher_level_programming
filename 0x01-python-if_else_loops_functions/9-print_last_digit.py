@@ -29,11 +29,7 @@ def get_last_digit(number):
         int_div = number // (10 ** power)
         number = number - (int_div * 10**power)
 
-        #  If number is less than 10 return signed last digit
-        if number < 10:
-            if is_negative:
-                return -1 * number
-            return number
+    return number
 
 
 def print_last_digit(number):
