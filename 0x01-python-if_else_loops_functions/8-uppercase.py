@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
 
-def uppercase(char):
-    ascii_no = ord(char)
-    if 65 <= ascii_no <= 90:
-        return True
-    else:
-        return False
+def uppercase(string):
+    for c in string:
+        ascii_no = ord(c)
+        if 97 <= ascii_no <= 122:
+            ascii_no -= 32
+        print(chr(ascii_no), end='')
+    print()
