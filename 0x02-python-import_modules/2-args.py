@@ -15,5 +15,6 @@ def command_line_args():
     else:
         print("{:d} arguments.".format(nargv))
 
+
 if __name__ == "__main__":
     command_line_args()
