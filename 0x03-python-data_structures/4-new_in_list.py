@@ -31,6 +31,5 @@ if __name__ == "__main__":
     print("..." * 10)
     new_list = new_in_list(my_list, 0, 0)
 
-    print("Original list:",my_list)
+    print("Original list:", my_list)
     print("New list:", new_list)
-
