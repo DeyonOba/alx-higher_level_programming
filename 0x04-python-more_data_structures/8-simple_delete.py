@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 def simple_delete(a_dictionary, key=""):
-    new_dict = {}
-
-    for k in a_dictionary:
-        if k != key:
-            new_dict[k] = a_dictionary[k]
-
-    return new_dict
+    if key in a_dictionary:
+        a_dictionary.pop(key)
+        return a_dictionary
+    else:
+        return a_dictionary
 
 
 if __name__ == "__main__":
