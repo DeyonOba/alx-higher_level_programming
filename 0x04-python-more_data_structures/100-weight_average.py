@@ -5,6 +5,9 @@ def weight_average(my_list=[]):
     """Get the Weight Average of a list"""
     total = 0
     n = 0
+    
+    if len(my_list) == 0:
+        return 0
 
     for i in my_list:
         total += i[0] * i[1]
