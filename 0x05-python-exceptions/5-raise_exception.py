@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def raise_exception():
-    raise("Exception")
+    raise("TypeError")
 
 
 if __name__ == "__main__":
