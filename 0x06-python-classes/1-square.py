@@ -6,6 +6,11 @@ class Square:
         size (int, float): size of a square
     """
     def __init__(self, size):
+        """Object initialization.
+
+        Args:
+            size: size of square
+        """
         self.__size = size
 
 
