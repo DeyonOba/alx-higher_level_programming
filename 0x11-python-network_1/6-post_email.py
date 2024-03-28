@@ -14,7 +14,7 @@ def main():
     param = {"email": email}
     r = requests.post(url, data=param)
 
-    print("Your email is:", r.content.decode())
+    print("Your email is:", r.content.decode("utf-8"))
 
 
 if __name__ == "__main__":
