@@ -10,8 +10,8 @@ def main():
 
     r = requests.get(url)
     print("Body response:")
-    print("\t- type:", type(r.text))
-    print("\t- content:", r.text)
+    print("\t- type:", type(r.content.decode("utf-8")))
+    print("\t- content:", r.content.decode("utf-8"))
 
 
 if __name__ == "__main__":
