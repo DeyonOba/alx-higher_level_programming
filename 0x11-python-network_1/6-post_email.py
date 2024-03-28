@@ -12,7 +12,7 @@ def main():
     email = sys.argv[2]
 
     param = {"email": email}
-    r = requests.get(url, params=param)
+    r = requests.post(url, data=param)
 
     print("Your email is:", r.content.decode())
 
