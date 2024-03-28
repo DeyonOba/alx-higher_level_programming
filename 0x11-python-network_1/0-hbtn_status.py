@@ -3,6 +3,7 @@
 
 import urllib.request
 
+
 def main():
     url = "https://alx-intranet.hbtn.io/status"
     with urllib.request.urlopen(url) as response:
@@ -13,6 +14,7 @@ def main():
     print(f"    - type: {type(body)}")
     print(f"    - content: {body}")
     print(f"    - utf8 content: {utf8_content}")
+
 
 if __name__ == "__main__":
     main()
