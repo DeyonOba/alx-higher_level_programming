@@ -27,7 +27,7 @@ def main():
             utf8_content = body.decode("utf-8")
             print(utf8_content)
     except urllib.error.HTTPError as e:
-        print("Error code: {}".format(e.code()))
+        print("Error code: {}".format(e.code))
 
 
 if __name__ == "__main__":
