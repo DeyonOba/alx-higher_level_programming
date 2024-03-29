@@ -16,10 +16,10 @@ import requests
 def main():
     url = "http://0.0.0.0:5000/search_user"
 
-    if len(sys.argv) == 2:
-        letter = sys.argv[1]
-    else:
+    if len(sys.argv) == 1:
         letter = ""
+    else:
+        letter = sys.argv[1]
 
     payload = {"q": letter}
     try:
@@ -30,7 +30,7 @@ def main():
             print("[{}] {}".format(data["id"], data["name"]))
         else:
             print("No result")
-    except requests.exceptions.JSONDecodeError:
+    except:
         print("Not a valid JSON")
 
 
