@@ -5,7 +5,7 @@ Module asserts if an object is subclass of the specified class.
 """
 
 
-def is_kind_of_class(obj, a_class) -> bool:
+def inherits_from(obj, a_class) -> bool:
     """
     Confirms if an object is a subclass of a specified class.
 
