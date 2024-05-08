@@ -34,4 +34,4 @@ def write_file(filename="", text="") -> int:
     with open(filename, mode="w", encoding="utf-8") as file:
         char_count += file.write(text)
 
-    return(char_count)
+    return (char_count)
