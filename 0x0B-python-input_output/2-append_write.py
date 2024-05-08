@@ -34,4 +34,4 @@ def append_write(filename="", text="") -> int:
     with open(filename, mode="a", encoding="utf-8") as file:
         char_count += file.write(text)
 
-    return(char_count)
+    return char_count
