@@ -11,12 +11,15 @@ of an object:
         list, dictionary, string, integer and boolean
     - You are not allowed to import any module
 """
-to_json_string = __import__("3-to_json_string").to_json_string
 
 
 def class_to_json(obj):
     """
     Dictionary description of a basic data structure.
     """
+    verified_types = [list, dict, str, int, bool]
     obj_attr = obj.__dict__
-    return to_json_string(obj_attr)
+    for key, value in obj_attr.copy().items():
+        if type(value) not in verified_types:
+            obj_attr.pop(key)
+    return obj_attr
