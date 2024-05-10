@@ -30,11 +30,11 @@ class Student:
         obj_dict = self.verify_attrs(self.__dict__)
         if not attrs:
             return obj_dict
-
+        attrs_type = type(attrs[0])
         new_attrs = {
             key: value
             for key, value in obj_dict.items()
-            if key in attrs
+            if key in attrs and type(key) is attrs_type
             }
         return new_attrs
 
