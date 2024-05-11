@@ -28,17 +28,18 @@ class Student:
 
     def to_json(self, attrs: list = None) -> dict:
         obj_dict = self.verify_attrs(self.__dict__)
-        if not attrs:
+        if attrs is None:
             return obj_dict
-        attrs_type = type(attrs[0])
+        if len(attrs) == 0:
+            return {}
         new_attrs = {
             key: value
             for key, value in obj_dict.items()
-            if key in attrs and type(key) is attrs_type
+            if key in attrs
             }
         return new_attrs
 
-    def verify_attrs(self, attrs: dict = None) -> dict:
+    def verify_attrs(self, attrs: dict = None,) -> dict:
         verified_types = [list, dict, str, int, bool]
         if attrs:
             tmp = attrs.copy()
