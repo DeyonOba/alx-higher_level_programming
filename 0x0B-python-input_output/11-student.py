@@ -56,6 +56,8 @@ class Student:
         return {}
 
     def reload_from_json(self, json: dict) -> None:
+        if len(json) == 0:
+            return
         for key in self.__dict__.copy():
             if key in json.keys():
                 setattr(self, key, json[key])
