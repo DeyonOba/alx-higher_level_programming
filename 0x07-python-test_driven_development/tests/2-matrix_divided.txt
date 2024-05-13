@@ -1,0 +1,27 @@
+# Set Up doctest
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+# Test Cases
+>>> good_mtrx = [[1, 2], [3, 4]]
+>>> bad_mtrx_size = [[1, 2], [3]]
+>>> bad_input_mtrx = [[1, 2], [3, "4"]]
+>>> matrix_divided(good_mtrx, "happy")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+>>> matrix_divided(good_mtrx, 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+>>> matrix_divided(bad_mtrx_size, 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+>>> matrix_divided(bad_input_mtrx, 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided(good_mtrx, 1)
+[[1.0, 2.0], [3.0, 4.0]]
+>>> matrix_divided(good_mtrx, 2)
+[[0.5, 1.0], [1.5, 2.0]]
