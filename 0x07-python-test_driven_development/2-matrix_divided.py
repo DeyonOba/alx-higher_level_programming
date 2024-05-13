@@ -51,6 +51,9 @@ def matrix_divided(matrix, div):
             raise TypeError(
                 "matrix must be a matrix (list of lists) of integers/floats"
             )
+        # Since I can't use the module deepcopy to copy inner obj lists
+        # I'll make a copy of each row of the matrix
+        matrix_cp[row_num] = row.copy()
         # Update variable `row_size` to current size of the first row in
         # the matrix
         if row_num == 0:
